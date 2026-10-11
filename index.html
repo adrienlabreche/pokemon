@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pokémon Card Explorer — English TCG Database</title>
+<style>
+:root{color-scheme:dark;--bg:#10131b;--panel:#1a2030;--panel2:#242e43;--text:#f4f6fb;--muted:#aeb8cb;--accent:#ffd34e;--line:#344057}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at top,#202b43 0,#10131b 58%);color:var(--text);font:16px/1.5 system-ui,-apple-system,Segoe UI,sans-serif}
+header{padding:30px 16px 24px;text-align:center;border-bottom:1px solid var(--line)}h1{font-size:clamp(1.8rem,5vw,3rem);margin:0;font-weight:900;letter-spacing:-1px}h1 span{color:var(--accent)}header p{color:var(--muted);max-width:800px;margin:8px auto 0}
+main{max-width:1450px;margin:auto;padding:20px 15px 44px}.filters{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}.filters input,.filters select{min-width:0;width:100%;font:inherit;border-radius:11px;border:1px solid var(--line);padding:11px 12px;background:var(--panel);color:var(--text)}.filters input:focus,.filters select:focus{outline:2px solid var(--accent)}
+h2{font-size:1.05rem;margin:22px 0 10px}.types{display:grid;grid-template-columns:repeat(auto-fit,minmax(115px,1fr));gap:8px}.type-btn{cursor:pointer;text-align:left;display:flex;align-items:center;gap:7px;background:var(--panel);color:var(--text);border:1px solid var(--line);border-radius:11px;padding:10px 9px}.type-btn.active{background:#3b3520;border-color:var(--accent)}.orb{width:12px;height:12px;border-radius:50%;flex-shrink:0;background:var(--c)}.type-btn small{margin-left:auto;color:var(--muted)}.summary{display:flex;justify-content:space-between;gap:12px;align-items:center;flex-wrap:wrap;margin:18px 0 12px;color:var(--muted)}.summary strong{color:var(--text)}button.action,.pagination button{cursor:pointer;border:1px solid var(--line);border-radius:10px;padding:10px 14px;background:var(--panel2);color:var(--text)}button.action.primary{background:var(--accent);color:#171717;border-color:var(--accent);font-weight:800}.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(155px,1fr));gap:14px}.card{min-width:0;background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:8px;overflow:hidden;transition:.15s}.card:hover{transform:translateY(-3px);border-color:#8291ad}.card img{display:block;width:100%;aspect-ratio:245/342;object-fit:contain;border-radius:9px;background:#0b0e14}.card h3{font-size:.9rem;line-height:1.25;margin:8px 1px 3px}.card p{font-size:.76rem;color:var(--muted);margin:3px 1px}.pill{display:inline-block;border:1px solid var(--line);border-radius:99px;padding:2px 7px;font-size:.68rem;color:var(--accent);margin:4px 3px 0 0}.status{text-align:center;padding:32px 10px;color:var(--muted)}.error{color:#ffb4b4}.pagination{display:flex;justify-content:center;align-items:center;gap:12px;margin:25px 0}.pagination button:disabled{opacity:.35;cursor:not-allowed}.owned-tools{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin:10px 0 16px}.owned-tools label{display:flex;align-items:center;gap:8px;background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:9px 12px;color:var(--text)}.owned-tools input{accent-color:var(--accent);width:17px;height:17px}.owned-tools .small{font-size:.82rem;color:var(--muted)}.owned-toggle{display:flex;align-items:center;gap:7px;margin-top:8px;font-size:.8rem;color:var(--muted);cursor:pointer}.owned-toggle input{accent-color:var(--accent);width:16px;height:16px}.card.is-owned{border-color:#72d6a0;box-shadow:inset 0 0 0 1px #72d6a0}.owned-tag{color:#8de5ae;font-size:.72rem;font-weight:800}.foot{border-top:1px solid var(--line);margin-top:30px;padding-top:18px;color:var(--muted);font-size:.82rem}.foot a{color:var(--accent)}.note{background:#1b2637;border:1px solid var(--line);border-radius:12px;padding:12px 14px;color:var(--muted);font-size:.85rem;margin-top:14px}
+@media(max-width:850px){.filters{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:480px){.filters{grid-template-columns:1fr}.cards{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.types{grid-template-columns:repeat(2,minmax(0,1fr))}}
+</style></head>
+<body>
+<header><h1>Pokémon <span>Card Explorer</span></h1><p>Browse English Pokémon TCG cards by Energy type, generation, expansion, rarity, and special card category.</p></header>
+<main>
+<div class="filters">
+<input id="search" type="search" placeholder="Search Pokémon or card name…" aria-label="Search by card name">
+<select id="generation" aria-label="Filter by generation"><option value="">All generations / eras</option></select>
+<select id="set" aria-label="Filter by expansion"><option value="">All expansions</option></select>
+<select id="rarity" aria-label="Filter by rarity"><option value="">All rarities</option></select>
+<select id="special" aria-label="Filter special cards"><option value="">All card categories</option><option value="ex">Pokémon ex</option><option value="EX">Pokémon-EX</option><option value="GX">Pokémon-GX</option><option value="V">Pokémon V</option><option value="VMAX">Pokémon VMAX</option><option value="VSTAR">Pokémon VSTAR</option><option value="Radiant">Radiant Pokémon</option><option value="Amazing">Amazing Pokémon</option><option value="Tag Team">TAG TEAM</option></select>
+<select id="sort" aria-label="Sort cards"><option value="name">Sort: Name A–Z</option><option value="newest">Sort: Newest set</option><option value="oldest">Sort: Oldest set</option><option value="number">Sort: Set number</option></select>
+</div>
+<h2>Browse by Energy type</h2><div id="types" class="types"></div>
+<div class="summary"><div id="count">Loading the card database…</div><button class="action primary" id="reset">Reset all filters</button></div>
+<div class="owned-tools">
+<label><input type="checkbox" id="hideOwned"> Hide cards I own</label>
+<button class="action" id="showOwned">Show only cards I own</button>
+<button class="action" id="clearOwned">Clear my collection</button>
+<span class="small" id="ownedCount">0 cards marked as owned</span>
+</div>
+<div id="status" class="status">Connecting to the Pokémon TCG database…</div><div id="cards" class="cards"></div>
+<div class="pagination"><button id="prev">← Previous</button><span id="page">Page 1</span><button id="next">Next →</button></div>
+<div class="note">This fan-made browser loads cards from the Pokémon TCG API. Filters can be combined. Some older card eras use different labels (for example, Pokémon-EX vs Pokémon ex). Not every card ever printed is guaranteed to be present in the database.</div>
+<div class="foot">Card data and images are supplied by the <a href="https://pokemontcg.io/" target="_blank" rel="noreferrer">Pokémon TCG API</a>. Pokémon and Pokémon TCG are trademarks of their respective owners. This is an unofficial fan-made project. Internet connection required.</div>
+</main>
+<script>
+const TYPES=[
+{name:"All Pokémon",icon:"✦",color:"#e8eaf0",q:""},
+{name:"Grass",icon:"🌿",color:"#63c887",q:"Grass"},{name:"Fire",icon:"🔥",color:"#ff795d",q:"Fire"},
+{name:"Water",icon:"💧",color:"#64b8ff",q:"Water"},{name:"Lightning",icon:"⚡",color:"#ffd34e",q:"Lightning"},
+{name:"Psychic",icon:"🔮",color:"#c28bff",q:"Psychic"},{name:"Fighting",icon:"✊",color:"#d39b72",q:"Fighting"},
+{name:"Darkness",icon:"🌑",color:"#9a8ac4",q:"Darkness"},{name:"Metal",icon:"⚙️",color:"#b5c4d4",q:"Metal"},
+{name:"Dragon",icon:"🐉",color:"#d8a6ff",q:"Dragon"},{name:"Fairy",icon:"✨",color:"#ff9fc9",q:"Fairy"},
+{name:"Colorless",icon:"⭐",color:"#c8d1dc",q:"Colorless"},{name:"Trainer cards",icon:"🎒",color:"#f1bd7a",q:"TRAINER"},
+{name:"Energy cards",icon:"🔋",color:"#80d9d0",q:"ENERGY"}];
+const $=id=>document.getElementById(id), PAGE_SIZE=24;
+let selected="All Pokémon",page=1,total=0,token=0,sets=[],generationOptions=[],ownedOnly=false;
+const OWNED_KEY="pokemonCardExplorerOwnedV1";
+let ownedCards=new Set();
+try { ownedCards=new Set(JSON.parse(localStorage.getItem(OWNED_KEY)||"[]")); } catch(e) {}
+function saveOwned(){try{localStorage.setItem(OWNED_KEY,JSON.stringify([...ownedCards]));}catch(e){}updateOwnedCount();}
+function updateOwnedCount(){$("ownedCount").textContent=`${ownedCards.size} cards marked as owned`;}
+const rarityValues=new Set();
+const esc=s=>String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+function renderTypes(){$("types").innerHTML=TYPES.map(t=>`<button class="type-btn ${selected===t.name?'active':''}" data-type="${t.name}" style="--c:${t.color}"><span class="orb"></span><span>${t.icon} ${t.name}</span></button>`).join("");$("types").querySelectorAll("button").forEach(b=>b.onclick=()=>{selected=b.dataset.type;page=1;renderTypes();loadCards()})}
+function buildQuery(){
+ let a=[];
+ if(selected==="Trainer cards")a.push('supertype:"Trainer"');
+ else if(selected==="Energy cards")a.push('supertype:"Energy"');
+ else if(selected!=="All Pokémon")a.push(`types:${selected}`);
+ else a.push('supertype:"Pokémon"');
+ let s=$("search").value.trim();if(s)a.push(`name:"*${s.replace(/[\\"]/g,"")}*"`);
+ if($("set").value)a.push(`set.id:${$("set").value}`);
+ if($("rarity").value)a.push(`rarity:"${$("rarity").value.replace(/"/g,"")}"`);
+ let special=$("special").value;if(special){if(special==="ex")a.push('subtypes:ex');else if(special==="EX")a.push('subtypes:EX');else if(special==="GX")a.push('subtypes:GX');else if(special==="V")a.push('subtypes:V');else if(special==="VMAX")a.push('subtypes:VMAX');else if(special==="VSTAR")a.push('subtypes:VSTAR');else if(special==="Radiant")a.push('subtypes:Radiant');else if(special==="Amazing")a.push('subtypes:"Amazing Rare"');else if(special==="Tag Team")a.push('subtypes:"TAG TEAM"')}
+ let gen=$("generation").value;if(gen){const setIds=sets.filter(s=>s.series===gen).map(s=>s.id);if(setIds.length)a.push('('+setIds.map(id=>`set.id:${id}`).join(' OR ')+')');else a.push('set.id:__no_such_set__')}
+ return a.join(" ");
+}
+async function loadCards(){
+ let my=++token;$("status").className="status";$("status").textContent="Loading cards…";$("cards").innerHTML="";$("count").textContent="Searching database…";$("prev").disabled=$("next").disabled=true;
+ let sort=$("sort").value,order=sort==="newest"?"-set.releaseDate":sort==="oldest"?"set.releaseDate":sort==="number"?"set.id,number":"name";
+ try{
+ const u=`https://api.pokemontcg.io/v2/cards?q=${encodeURIComponent(buildQuery())}&page=${page}&pageSize=${PAGE_SIZE}&orderBy=${encodeURIComponent(order)}`;
+ const r=await fetch(u);if(!r.ok)throw Error(r.status===429?"The API is busy; wait a moment and retry.":`The API returned error ${r.status}.`);
+ const j=await r.json();if(my!==token)return;total=j.totalCount||0;
+ j.data.forEach(c=>{if(c.rarity)rarityValues.add(c.rarity)});let oldR=$("rarity").value;$("rarity").innerHTML='<option value="">All rarities</option>'+[...rarityValues].sort().map(v=>`<option value="${esc(v)}">${esc(v)}</option>`).join('');$("rarity").value=oldR;
+ $("count").innerHTML=`<strong>${total.toLocaleString()}</strong> matching cards · ${j.data.length} on this page before collection filters`;$("page").textContent=`Page ${page}`;$("prev").disabled=page<=1;$("next").disabled=page*PAGE_SIZE>=total;
+ $("status").textContent=j.data.length?"":"No cards found. Try changing or clearing one of the filters.";
+ let cardsToShow=j.data;
+ if(ownedOnly) cardsToShow=cardsToShow.filter(c=>ownedCards.has(c.id));
+ if($("hideOwned").checked) cardsToShow=cardsToShow.filter(c=>!ownedCards.has(c.id));
+ $("cards").innerHTML=cardsToShow.map(c=>{let img=c.images?.small||c.images?.large||"",types=(c.types||[]).map(t=>`<span class="pill">${esc(t)}</span>`).join(""),sub=(c.subtypes||[]).map(t=>`<span class="pill">${esc(t)}</span>`).join(""),isOwned=ownedCards.has(c.id);return `<article class="card ${isOwned?'is-owned':''}"><a href="${esc(c.images?.large||img||"https://pokemontcg.io/")}" target="_blank" rel="noreferrer"><img loading="lazy" src="${esc(img)}" alt="${esc(c.name)}" onerror="this.alt='Image unavailable';this.style.opacity='.25'"></a><h3>${esc(c.name)}</h3><p>${esc(c.set?.name||"")} ${c.number?"· #"+esc(c.number):""}</p><p>${esc(c.rarity||c.supertype||"Card")}</p>${types}${sub}<label class="owned-toggle"><input type="checkbox" data-card-id="${esc(c.id)}" ${isOwned?'checked':''}> I own this card ${isOwned?'<span class="owned-tag">✓ OWNED</span>':''}</label></article>`}).join("");
+ $("cards").querySelectorAll('input[data-card-id]').forEach(cb=>cb.addEventListener('change',()=>{if(cb.checked)ownedCards.add(cb.dataset.cardId);else ownedCards.delete(cb.dataset.cardId);saveOwned();loadCards();}));
+ updateOwnedCount();
+ if(ownedOnly && !cardsToShow.length) $("status").textContent="No owned cards on this page. Search another page or turn off “Show only cards I own”.";
+ }catch(e){if(my!==token)return;$("status").className="status error";$("status").textContent=`Could not load cards. ${e.message} Check your connection and try again.`;$("count").textContent="Card database unavailable"}
+}
+async function loadMetadata(){
+ try{let r=await fetch("https://api.pokemontcg.io/v2/sets?pageSize=250&orderBy=-releaseDate");if(!r.ok)throw Error();let j=await r.json();sets=j.data||[];
+ let gens=[...new Set(sets.map(s=>s.series).filter(Boolean))];$("generation").innerHTML='<option value="">All generations / eras</option>'+gens.map(g=>`<option value="${esc(g)}">${esc(g)}</option>`).join("");
+ $("set").innerHTML='<option value="">All expansions</option>'+sets.map(s=>`<option value="${esc(s.id)}">${esc(s.name)} (${esc(s.series||"")})</option>`).join("");
+ let rarities=[...new Set([])]; // Rarity values are discovered from returned card results below.
+ }catch(e){/* Filters still work without metadata if the API is unavailable. */}
+}
+let rarityCache=new Set();
+function updateRarities(data){data.forEach(c=>{if(c.rarity)rarityCache.add(c.rarity)});let old=$("rarity").value,vals=[...rarityCache].sort();$("rarity").innerHTML='<option value="">All rarities</option>'+vals.map(r=>`<option value="${esc(r)}">${esc(r)}</option>`).join("");$("rarity").value=vals.includes(old)?old:""}
+const originalLoad=loadCards;
+loadCards=async function(){await originalLoad();};
+let debounce;
+$("search").addEventListener("input",()=>{clearTimeout(debounce);debounce=setTimeout(()=>{page=1;loadCards()},350)});
+["generation","set","rarity","special","sort"].forEach(id=>$(id).addEventListener("change",()=>{page=1;loadCards()}));
+$("prev").onclick=()=>{if(page>1){page--;loadCards();window.scrollTo({top:0,behavior:"smooth"})}};
+$("next").onclick=()=>{if(page*PAGE_SIZE<total){page++;loadCards();window.scrollTo({top:0,behavior:"smooth"})}};
+$("reset").onclick=()=>{$("search").value="";["generation","set","rarity","special"].forEach(id=>$(id).value="");$("sort").value="name";selected="All Pokémon";page=1;renderTypes();loadCards()};
+$("hideOwned").addEventListener("change",()=>loadCards());
+$("showOwned").addEventListener("click",()=>{ownedOnly=!ownedOnly;$("showOwned").textContent=ownedOnly?"Show all matching cards":"Show only cards I own";page=1;loadCards()});
+$("clearOwned").addEventListener("click",()=>{if(confirm("Remove all saved owned-card checkmarks?")){ownedCards.clear();saveOwned();loadCards()}});
+renderTypes();updateOwnedCount();loadMetadata().then(loadCards);
+</script></body></html>
