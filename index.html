@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Pokémon Card Explorer — English TCG Database</title>
+<title>Pokémon Card Explorer — Base de données TCG</title>
 <style>
 :root{color-scheme:dark;--bg:#10131b;--panel:#1a2030;--panel2:#242e43;--text:#f4f6fb;--muted:#aeb8cb;--accent:#ffd34e;--line:#344057}
 *{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at top,#202b43 0,#10131b 58%);color:var(--text);font:16px/1.5 system-ui,-apple-system,Segoe UI,sans-serif}
-header{position:relative;padding:30px 16px 24px;text-align:center;border-bottom:1px solid var(--line)}.header-shell{max-width:1450px;margin:0 auto;position:relative}.lang-wrap{position:absolute;top:0;right:0;display:flex;align-items:center;justify-content:flex-end}.lang-select{appearance:none;-webkit-appearance:none;-moz-appearance:none;border:1px solid var(--line);border-radius:999px;background:rgba(26,32,48,.9);color:var(--text);padding:9px 38px 9px 12px;font:inherit;cursor:pointer;box-shadow:0 8px 22px rgba(0,0,0,.15)}.lang-select:focus{outline:2px solid var(--accent);outline-offset:2px}.lang-wrap::after{content:"▾";position:absolute;right:14px;pointer-events:none;color:var(--muted);font-size:.8rem}.account-panel{position:absolute;top:0;left:0;display:flex;align-items:center;gap:8px;flex-wrap:wrap;max-width:min(430px,calc(100vw - 220px));z-index:2}.account-box{display:flex;align-items:center;gap:8px;padding:8px 10px;border:1px solid var(--line);border-radius:999px;background:rgba(26,32,48,.92);box-shadow:0 8px 22px rgba(0,0,0,.15)}.account-box input{background:rgba(16,19,27,.9);color:var(--text);border:1px solid var(--line);border-radius:999px;padding:8px 10px;min-width:130px}.account-box button,.plain-button{cursor:pointer;border:1px solid var(--line);border-radius:999px;background:var(--panel2);color:var(--text);padding:8px 12px}.account-box button.primary,.plain-button.primary{background:var(--accent);border-color:var(--accent);color:#171717;font-weight:800}.account-box .signed-user{display:flex;align-items:center;gap:8px;font-size:.86rem;color:var(--muted)}.auth-message{margin-top:8px;padding:8px 10px;border-radius:10px;background:rgba(255,211,78,.12);border:1px solid rgba(255,211,78,.25);color:var(--text);font-size:.8rem;display:none}.auth-message.visible{display:block}.auth-message.error{background:rgba(255,110,110,.12);border-color:rgba(255,110,110,.25);color:#ffc9c9}h1{font-size:clamp(1.8rem,5vw,3rem);margin:0;font-weight:900;letter-spacing:-1px}h1 span{color:var(--accent)}header p{color:var(--muted);max-width:800px;margin:8px auto 0}
+header{position:relative;padding:30px 16px 24px;text-align:center;border-bottom:1px solid var(--line)}.header-shell{max-width:1450px;margin:0 auto;position:relative}.lang-wrap{position:absolute;top:0;right:0;display:flex;align-items:center;justify-content:flex-end}.lang-select{appearance:none;-webkit-appearance:none;-moz-appearance:none;border:1px solid var(--line);border-radius:999px;background:rgba(26,32,48,.9);color:var(--text);padding:9px 38px 9px 12px;font:inherit;cursor:pointer;box-shadow:0 8px 22px rgba(0,0,0,.15)}.lang-select:focus{outline:2px solid var(--accent);outline-offset:2px}.lang-wrap::after{content:"▾";position:absolute;right:14px;pointer-events:none;color:var(--muted);font-size:.8rem}.account-panel{position:absolute;top:0;left:0;display:flex;align-items:center;gap:8px;flex-wrap:wrap;max-width:min(430px,calc(100vw - 220px));z-index:2}.account-box{display:flex;align-items:center;gap:8px;padding:8px 10px;border:1px solid var(--line);border-radius:999px;background:rgba(26,32,48,.92);box-shadow:0 8px 22px rgba(0,0,0,.15)}.account-box input{background:rgba(16,19,27,.9);color:var(--text);border:1px solid var(--line);border-radius:999px;padding:8px 10px;min-width:130px}.account-box button,.plain-button{cursor:pointer;border:1px solid var(--line);border-radius:999px;background:var(--panel2);color:var(--text);padding:8px 12px}.account-box button.primary,.plain-button.primary{background:var(--accent);border-color:var(--accent);color:#171717;font-weight:800}.account-box .signed-user{display:flex;align-items:center;gap:8px;font-size:.86rem;color:var(--muted)}.auth-message{margin-top:8px;padding:8px 10px;border-radius:10px;background:rgba(255,211,78,.12);border:1px solid rgba(255,211,78,.25);color:var(--text);font-size:.8rem;display:none}.auth-message.visible{display:block}.auth-message.error{background:rgba(255,110,110,.12);border-color:rgba(255,110,110,.25);color:#ffc9c9}.account-link{margin-top:10px;text-align:center}.account-link a{color:var(--accent);text-decoration:none;font-weight:700}.account-link a:hover{text-decoration:underline}h1{font-size:clamp(1.8rem,5vw,3rem);margin:0;font-weight:900;letter-spacing:-1px}h1 span{color:var(--accent)}header p{color:var(--muted);max-width:800px;margin:8px auto 0}
 main{max-width:1450px;margin:auto;padding:20px 15px 44px}.filters{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}.filters input,.filters select{min-width:0;width:100%;font:inherit;border-radius:11px;border:1px solid var(--line);padding:11px 12px;background:var(--panel);color:var(--text)}.filters input:focus,.filters select:focus{outline:2px solid var(--accent)}
 h2{font-size:1.05rem;margin:22px 0 10px}.types{display:grid;grid-template-columns:repeat(auto-fit,minmax(115px,1fr));gap:8px}.type-btn{cursor:pointer;text-align:left;display:flex;align-items:center;gap:7px;background:var(--panel);color:var(--text);border:1px solid var(--line);border-radius:11px;padding:10px 9px}.type-btn.active{background:#3b3520;border-color:var(--accent)}.orb{width:12px;height:12px;border-radius:50%;flex-shrink:0;background:var(--c)}.type-btn small{margin-left:auto;color:var(--muted)}.summary{display:flex;justify-content:space-between;gap:12px;align-items:center;flex-wrap:wrap;margin:18px 0 12px;color:var(--muted)}.summary strong{color:var(--text)}button.action,.pagination button{cursor:pointer;border:1px solid var(--line);border-radius:10px;padding:10px 14px;background:var(--panel2);color:var(--text)}button.action.primary{background:var(--accent);color:#171717;border-color:var(--accent);font-weight:800}.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(155px,1fr));gap:14px}.card{min-width:0;background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:8px;overflow:hidden;transition:.15s}.card:hover{transform:translateY(-3px);border-color:#8291ad}.card img{display:block;width:100%;aspect-ratio:245/342;object-fit:contain;border-radius:9px;background:#0b0e14}.card h3{font-size:.9rem;line-height:1.25;margin:8px 1px 3px}.card p{font-size:.76rem;color:var(--muted);margin:3px 1px}.pill{display:inline-block;border:1px solid var(--line);border-radius:99px;padding:2px 7px;font-size:.68rem;color:var(--accent);margin:4px 3px 0 0}.status{text-align:center;padding:32px 10px;color:var(--muted)}.error{color:#ffb4b4}.pagination{display:flex;justify-content:center;align-items:center;gap:12px;margin:25px 0}.pagination button:disabled{opacity:.35;cursor:not-allowed}.owned-tools{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin:10px 0 16px}.owned-tools label{display:flex;align-items:center;gap:8px;background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:9px 12px;color:var(--text)}.owned-tools input{accent-color:var(--accent);width:17px;height:17px}.owned-tools .small{font-size:.82rem;color:var(--muted)}.owned-toggle{display:flex;align-items:center;gap:7px;margin-top:8px;font-size:.8rem;color:var(--muted);cursor:pointer}.owned-toggle input{accent-color:var(--accent);width:16px;height:16px}.card.is-owned{border-color:#72d6a0;box-shadow:inset 0 0 0 1px #72d6a0}.owned-tag{color:#8de5ae;font-size:.72rem;font-weight:800}.price{color:#ffe08a!important;font-weight:800;font-size:.82rem!important}.view-panel{margin:16px 0;padding:14px;border:1px solid var(--line);background:var(--panel);border-radius:13px}.view-panel h2{margin:0 0 8px}.view-panel p{margin:4px 0;color:var(--muted);font-size:.86rem}.view-buttons{display:flex;gap:8px;flex-wrap:wrap}.view-buttons button.active{border-color:var(--accent);color:var(--accent)}.foot{border-top:1px solid var(--line);margin-top:30px;padding-top:18px;color:var(--muted);font-size:.82rem}.foot a{color:var(--accent)}.note{background:#1b2637;border:1px solid var(--line);border-radius:12px;padding:12px 14px;color:var(--muted);font-size:.85rem;margin-top:14px}
 @media(max-width:850px){.filters{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:480px){.filters{grid-template-columns:1fr}.cards{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.types{grid-template-columns:repeat(2,minmax(0,1fr))}}
@@ -16,48 +16,49 @@ h2{font-size:1.05rem;margin:22px 0 10px}.types{display:grid;grid-template-column
   <div class="header-shell">
     <div class="account-panel">
       <div id="auth-panel" class="account-box">
-        <input id="auth-email" type="email" placeholder="Email" aria-label="Email" />
-        <input id="auth-password" type="password" placeholder="Password" aria-label="Password" />
-        <button id="sign-up-button" class="primary">Create account</button>
-        <button id="sign-in-button">Log in</button>
-        <button id="sign-out-button" class="plain-button" style="display:none;">Log out</button>
+        <input id="auth-email" type="email" placeholder="E-mail" aria-label="E-mail" />
+        <input id="auth-password" type="password" placeholder="Mot de passe" aria-label="Mot de passe" />
+        <button id="sign-up-button" class="primary">Créer un compte</button>
+        <button id="sign-in-button">Se connecter</button>
+        <button id="sign-out-button" class="plain-button" style="display:none;">Se déconnecter</button>
       </div>
     </div>
     <div class="lang-wrap">
-      <label class="sr-only" for="language-select" style="position:absolute;left:-9999px;">Language</label>
-      <select id="language-select" class="lang-select" aria-label="Choose language">
+      <label class="sr-only" for="language-select" style="position:absolute;left:-9999px;">Langue</label>
+      <select id="language-select" class="lang-select" aria-label="Choisir la langue">
         <option value="en">English</option>
-        <option value="fr">Français</option>
+        <option value="fr" selected>Français</option>
       </select>
     </div>
-    <h1 id="mainTitle">Pokémon <span>Card Explorer</span></h1>
-    <p id="pageSubtitle">Browse English Pokémon TCG cards by Energy type, generation, expansion, rarity, and special card category.</p>
+    <h1 id="mainTitle">Pokémon <span>Explorateur de cartes</span></h1>
+    <p id="pageSubtitle">Parcourez les cartes Pokémon TCG en français selon le type d’énergie, la génération, l’extension, la rareté et la catégorie spéciale.</p>
     <div id="auth-message" class="auth-message" aria-live="polite"></div>
+    <p class="account-link"><a href="signup.html">Créer un compte</a> · <a href="login.html">Se connecter</a></p>
   </div>
 </header>
 <main>
 <div class="filters">
-<input id="search" type="search" placeholder="Search Pokémon or card name…" aria-label="Search by card name">
-<select id="generation" aria-label="Filter by generation"><option value="">All generations / eras</option></select>
-<select id="set" aria-label="Filter by expansion"><option value="">All expansions</option></select>
-<select id="rarity" aria-label="Filter by rarity"><option value="">All rarities</option></select>
-<select id="halloween" aria-label="Halloween cards"><option value="">All card themes</option><option value="halloween">Halloween / Trick or Trade</option></select>
-<select id="special" aria-label="Filter special cards"><option value="">All card categories</option><option value="ex">Pokémon ex</option><option value="EX">Pokémon-EX</option><option value="GX">Pokémon-GX</option><option value="V">Pokémon V</option><option value="VMAX">Pokémon VMAX</option><option value="VSTAR">Pokémon VSTAR</option><option value="Radiant">Radiant Pokémon</option><option value="Amazing">Amazing Pokémon</option><option value="Tag Team">TAG TEAM</option></select>
-<select id="sort" aria-label="Sort cards"><option value="name">Sort: Name A–Z</option><option value="newest">Sort: Newest set</option><option value="oldest">Sort: Oldest set</option><option value="number">Sort: Set number</option></select>
+<input id="search" type="search" placeholder="Rechercher un Pokémon ou une carte…" aria-label="Rechercher une carte">
+<select id="generation" aria-label="Filtrer par génération"><option value="">Toutes générations / époques</option></select>
+<select id="set" aria-label="Filtrer par extension"><option value="">Toutes extensions</option></select>
+<select id="rarity" aria-label="Filtrer par rareté"><option value="">Toutes raretés</option></select>
+<select id="halloween" aria-label="Cartes Halloween"><option value="">Tous thèmes de cartes</option><option value="halloween">Halloween / Trick or Trade</option></select>
+<select id="special" aria-label="Filtrer les cartes spéciales"><option value="">Toutes catégories</option><option value="ex">Pokémon ex</option><option value="EX">Pokémon-EX</option><option value="GX">Pokémon-GX</option><option value="V">Pokémon V</option><option value="VMAX">Pokémon VMAX</option><option value="VSTAR">Pokémon VSTAR</option><option value="Radiant">Radiant Pokémon</option><option value="Amazing">Amazing Pokémon</option><option value="Tag Team">TAG TEAM</option></select>
+<select id="sort" aria-label="Trier les cartes"><option value="name">Tri : Nom A–Z</option><option value="newest">Tri : Plus récente</option><option value="oldest">Tri : Plus ancienne</option><option value="number">Tri : Numéro</option></select>
 </div>
-<h2 id="energyTypeTitle">Browse by Energy type</h2><div id="types" class="types"></div>
-<div class="summary"><div id="count">Chargement de la base de cartes…</div><button class="action primary" id="reset">Reset all filters</button></div>
+<h2 id="energyTypeTitle">Parcourir par type d’énergie</h2><div id="types" class="types"></div>
+<div class="summary"><div id="count">Chargement de la base de cartes…</div><button class="action primary" id="reset">Réinitialiser les filtres</button></div>
 <div class="owned-tools">
-<label><input type="checkbox" id="hideOwned"><span id="hideOwnedText">Hide cards I own</span></label>
-<button class="action" id="showOwned">Show only cards I own</button>
-<button class="action" id="clearOwned">Clear my collection</button>
-<span class="small" id="ownedCount">0 cards marked as owned</span>
+<label><input type="checkbox" id="hideOwned"><span id="hideOwnedText">Masquer les cartes que j’ai</span></label>
+<button class="action" id="showOwned">Afficher seulement mes cartes</button>
+<button class="action" id="clearOwned">Effacer ma collection</button>
+<span class="small" id="ownedCount">0 cartes marquées comme possédées</span>
 </div>
 <div class="view-panel">
  <div class="view-buttons">
-  <button class="action" id="browseView">Browse cards</button>
-  <button class="action" id="collectionView">My collection</button>
-  <button class="action" id="remainingView">Cards I still need</button>
+  <button class="action" id="browseView">Parcourir les cartes</button>
+  <button class="action" id="collectionView">Ma collection</button>
+  <button class="action" id="remainingView">Cartes manquantes</button>
  </div>
  <div id="collectionSummary"><p>Marquez les cartes avec « J’ai cette carte » pour constituer votre collection. Les prix sont des estimations de la base de données lorsque disponibles ; les tirages estampillés Halloween peuvent avoir un prix différent.</p></div>
 </div>
@@ -72,6 +73,38 @@ const SUPABASE_ANON_KEY='sb_publishable_8c9YxtuPjUGKyJUPHd-mWw_I74GqwOJ';
 const ONLINE_ACCOUNTS_ENABLED = Boolean(SUPABASE_URL && SUPABASE_URL.includes('supabase.co') && SUPABASE_ANON_KEY && !SUPABASE_ANON_KEY.includes('YOUR_'));
 let supabaseClient=null;
 let currentUser=null;
+
+function getAppRedirectUrl(){
+  try {
+    const url = new URL(window.location.href);
+    url.hash = '';
+    url.search = '';
+    if(url.pathname && !url.pathname.endsWith('/')) {
+      url.pathname = url.pathname.replace(/\/[^/]*$/, '/');
+    }
+    return url.toString();
+  } catch (error) {
+    return window.location.origin || 'https://example.com';
+  }
+}
+
+function normalizeSupabaseAuthCallback(){
+  const href = window.location.href;
+  const hasSupabaseAuthParams = /(?:\?|#)(?:access_token=|refresh_token=|code=)/.test(href);
+  if(!hasSupabaseAuthParams) return;
+
+  try {
+    const url = new URL(href);
+    url.hash = '';
+    url.search = '';
+    if(url.pathname && !url.pathname.endsWith('/')) {
+      url.pathname = url.pathname.replace(/\/[^/]*$/, '/');
+    }
+    window.history.replaceState({}, '', url.toString());
+  } catch (error) {
+    window.location.replace('/');
+  }
+}
 
 function setAuthMessage(text, isError=false){
   const el=$('auth-message');
@@ -135,7 +168,11 @@ async function initSupabaseClient(){
   if(!supabaseModule) return null;
   if(!supabaseClient){
     supabaseClient=supabaseModule.createClient(SUPABASE_URL, SUPABASE_ANON_KEY, {
-      auth: { persistSession: true, autoRefreshToken: true, detectSessionInUrl: true }
+      auth: {
+        persistSession: true,
+        autoRefreshToken: true,
+        detectSessionInUrl: true
+      }
     });
   }
   return supabaseClient;
@@ -148,7 +185,14 @@ async function signUp(){
   if(!ONLINE_ACCOUNTS_ENABLED){ setAuthMessage('Add the Supabase URL and anonymous key to enable online accounts.', true); return; }
   try{
     const client=await initSupabaseClient();
-    const { data, error } = await client.auth.signUp({ email, password });
+    const redirectUrl = getAppRedirectUrl();
+    const { data, error } = await client.auth.signUp({
+      email,
+      password,
+      options: {
+        emailRedirectTo: redirectUrl
+      }
+    });
     if(error) throw error;
     setAuthMessage('Account created successfully. Check your email if confirmation is required.', false);
     if(data?.user){ currentUser=data.user; renderAuthState(); await loadRemoteCollection(); }
@@ -236,6 +280,7 @@ async function persistCollectionChanges(){
 }
 
 async function initAccountSupport(){
+  normalizeSupabaseAuthCallback();
   if(!ONLINE_ACCOUNTS_ENABLED){
     renderAuthState();
     return;
@@ -290,22 +335,50 @@ async function fetchWithRetry(url, { retries=2, delayMs=500 }={}){
 let selected="All Pokémon",page=1,total=0,token=0,sets=[],generationOptions=[],ownedOnly=false,viewMode="browse";
 const OWNED_DETAILS_KEY="pokemonCardExplorerOwnedDetailsV1";
 let ownedDetails={};
+const DEFAULT_EUR_TO_USD_RATE=1.09;
+let eurToUsdRate=DEFAULT_EUR_TO_USD_RATE;
+let eurUsdRateLoaded=false;
+
+async function loadEurToUsdRate(){
+  if(eurUsdRateLoaded) return eurToUsdRate;
+  try{
+    const response=await fetch('https://api.frankfurter.app/latest?from=EUR&to=USD');
+    if(!response.ok) throw new Error('Exchange rate fetch failed');
+    const data=await response.json();
+    const rate=Number(data?.rates?.USD);
+    if(Number.isFinite(rate) && rate > 0){
+      eurToUsdRate=rate;
+    }
+  } catch(error){
+    eurToUsdRate=DEFAULT_EUR_TO_USD_RATE;
+  }
+  eurUsdRateLoaded=true;
+  return eurToUsdRate;
+}
+
+function convertToUsd(amount, currency='USD'){
+  if(!Number.isFinite(Number(amount))) return 0;
+  const value=Number(amount);
+  if(currency==='EUR') return value * eurToUsdRate;
+  return value;
+}
+
 try { ownedDetails=JSON.parse(localStorage.getItem(OWNED_DETAILS_KEY)||"{}")||{}; } catch(e) {}
 function saveOwnedDetails(){try{localStorage.setItem(OWNED_DETAILS_KEY,JSON.stringify(ownedDetails));}catch(e){}}
 function cardPrice(c){
  const prices=c.tcgplayer?.prices||{};
  const order=["holofoil","reverseHolofoil","normal","1stEditionHolofoil","unlimitedHolofoil"];
- for(const k of order){const v=prices[k]?.market ?? prices[k]?.mid ?? prices[k]?.low;if(typeof v==="number")return `$${v.toFixed(2)} USD`;}
+ for(const k of order){const v=prices[k]?.market ?? prices[k]?.mid ?? prices[k]?.low;if(typeof v==="number")return `$${convertToUsd(v,'USD').toFixed(2)} USD`;}
  const cm=c.cardmarket?.prices?.averageSellPrice;
- if(typeof cm==="number")return `€${cm.toFixed(2)} EUR`;
+ if(typeof cm==="number")return `$${convertToUsd(cm,'EUR').toFixed(2)} USD`;
  return "Price unavailable";
 }
 function cardPriceValue(c){
   const prices=c?.tcgplayer?.prices||{};
   const order=["holofoil","reverseHolofoil","normal","1stEditionHolofoil","unlimitedHolofoil"];
-  for(const k of order){const v=prices[k]?.market ?? prices[k]?.mid ?? prices[k]?.low;if(typeof v==="number")return v;}
+  for(const k of order){const v=prices[k]?.market ?? prices[k]?.mid ?? prices[k]?.low;if(typeof v==="number")return convertToUsd(v,'USD');}
   const cm=c?.cardmarket?.prices?.averageSellPrice;
-  if(typeof cm==="number")return cm;
+  if(typeof cm==="number")return convertToUsd(cm,'EUR');
   return 0;
 }
 function renderCollection(){
@@ -421,12 +494,18 @@ const translations={
     connectingDatabase:'Connexion à la base de données Pokémon TCG…',
     prev:'← Précédent',
     next:'Suivant →',
+    iOwnThisCard:'J’ai cette carte',
+    ownedTag:'✓ POSSÉDÉE',
+    confirmClearOwned:'Supprimer toutes les cartes marquées comme possédées ?',
+    confirmClearOwnedFinal:'Cette action est irréversible. Confirmez-vous vraiment la suppression complète de votre collection ?',
+    apiTemporaryError:'L’API Pokémon TCG est temporairement indisponible. Les tentatives automatiques ont échoué ; réessayez dans un instant.',
+    apiLoadError:'Impossible de charger les cartes. Vérifiez votre connexion et réessayez.',
     note:'Ce navigateur fan-made charge des cartes depuis l’API Pokémon TCG. Les filtres peuvent être combinés. Certaines anciennes époques utilisent des libellés différents (par exemple, Pokémon-EX vs Pokémon ex). Toutes les cartes jamais imprimées ne sont pas forcément présentes dans la base.',
     footer:'Les données et images des cartes sont fournies par la <a href="https://pokemontcg.io/" target="_blank" rel="noreferrer">Pokémon TCG API</a>. Pokémon et Pokémon TCG sont des marques déposées de leurs propriétaires respectifs. Il s’agit d’un projet non officiel créé par des fans. Connexion Internet requise.'
   }
 };
 const TYPE_LABELS={en:{'All Pokémon':'All Pokémon',Grass:'Grass',Fire:'Fire',Water:'Water',Lightning:'Lightning',Psychic:'Psychic',Fighting:'Fighting',Darkness:'Darkness',Metal:'Metal',Dragon:'Dragon',Fairy:'Fairy',Colorless:'Colorless','Trainer cards':'Trainer cards','Energy cards':'Energy cards'},fr:{'All Pokémon':'Tous les Pokémon',Grass:'Plante',Fire:'Feu',Water:'Eau',Lightning:'Électrik',Psychic:'Psy',Fighting:'Combat',Darkness:'Ténèbres',Metal:'Métal',Dragon:'Dragon',Fairy:'Fée',Colorless:'Incolore','Trainer cards':'Cartes Dresseur','Energy cards':'Cartes Énergie'}};
-let currentLanguage='en';
+let currentLanguage='fr';
 function t(key){return (translations[currentLanguage]&&translations[currentLanguage][key])||translations.en[key]||key;}
 function applyLanguage(lang){
   currentLanguage = translations[lang] ? lang : 'en';
@@ -501,7 +580,7 @@ async function loadCards(){
  const searchTerm=$("search").value.trim().toLowerCase();
  const filteredData=searchTerm ? j.data.filter(c=>cardMatchesSearch(c, searchTerm)) : j.data;
  filteredData.forEach(c=>{if(c.rarity)rarityValues.add(c.rarity)});let oldR=$("rarity").value;$("rarity").innerHTML='<option value="">'+t('allRarities')+'</option>'+ [...rarityValues].sort().map(v=>`<option value="${esc(v)}">${esc(v)}</option>`).join('');$("rarity").value=oldR;
- $("count").innerHTML=`<strong>${total.toLocaleString()}</strong> matching cards · ${filteredData.length} on this page before collection filters`;$("page").textContent=`Page ${page}`;$("prev").disabled=page<=1;$("next").disabled=page*PAGE_SIZE>=total;
+ $("count").innerHTML=`<strong>${total.toLocaleString()}</strong> cartes correspondant à la recherche · ${filteredData.length} sur cette page avant les filtres de collection`;$("page").textContent=`Page ${page}`;$("prev").disabled=page<=1;$("next").disabled=page*PAGE_SIZE>=total;
  $("status").textContent=filteredData.length?"":t('noCards');
  let cardsToShow=filteredData;
  if(ownedOnly || viewMode==="collection") cardsToShow=cardsToShow.filter(c=>ownedCards.has(c.id));
@@ -509,11 +588,11 @@ async function loadCards(){
  if(viewMode==="collection") $("status").textContent=t('showingOwned');
  $("cards").style.display=viewMode==="collection"?"none":"grid";
  $("collectionSummary").style.display=viewMode==="collection"?"block":"block";
- $("cards").innerHTML=cardsToShow.map(c=>{let img=c.images?.small||c.images?.large||"",types=(c.types||[]).map(t=>`<span class="pill">${esc(t)}</span>`).join(""),sub=(c.subtypes||[]).map(t=>`<span class="pill">${esc(t)}</span>`).join(""),isOwned=ownedCards.has(c.id);return `<article class="card ${isOwned?'is-owned':''}"><a href="${esc(c.images?.large||img||"https://pokemontcg.io/")}" target="_blank" rel="noreferrer"><img loading="lazy" src="${esc(img)}" alt="${esc(c.name)}" onerror="this.alt='Image unavailable';this.style.opacity='.25'"></a><h3>${esc(c.name)}</h3><p>${esc(c.set?.name||"")} ${c.number?"· #"+esc(c.number):""}</p><p>${esc(c.rarity||c.supertype||"Card")}</p><p class="price">${t('marketEstimate')} ${esc(cardPrice(c))}</p>${types}${sub}<label class="owned-toggle"><input type="checkbox" data-card-id="${esc(c.id)}" ${isOwned?'checked':''}> I own this card ${isOwned?'<span class="owned-tag">✓ OWNED</span>':''}</label></article>`}).join("");
+ $("cards").innerHTML=cardsToShow.map(c=>{let img=c.images?.small||c.images?.large||"",types=(c.types||[]).map(t=>`<span class="pill">${esc(t)}</span>`).join(""),sub=(c.subtypes||[]).map(t=>`<span class="pill">${esc(t)}</span>`).join(""),isOwned=ownedCards.has(c.id);return `<article class="card ${isOwned?'is-owned':''}"><a href="${esc(c.images?.large||img||"https://pokemontcg.io/")}" target="_blank" rel="noreferrer"><img loading="lazy" src="${esc(img)}" alt="${esc(c.name)}" onerror="this.alt='Image unavailable';this.style.opacity='.25'"></a><h3>${esc(c.name)}</h3><p>${esc(c.set?.name||"")} ${c.number?"· #"+esc(c.number):""}</p><p>${esc(c.rarity||c.supertype||"Card")}</p><p class="price">${t('marketEstimate')} ${esc(cardPrice(c))}</p>${types}${sub}<label class="owned-toggle"><input type="checkbox" data-card-id="${esc(c.id)}" ${isOwned?'checked':''}> ${t('iOwnThisCard')} ${isOwned?`<span class="owned-tag">${t('ownedTag')}</span>':''}</label></article>`}).join("");
  $("cards").querySelectorAll('input[data-card-id]').forEach(cb=>cb.addEventListener('change',async()=>{const c=j.data.find(x=>x.id===cb.dataset.cardId);if(cb.checked){ownedCards.add(cb.dataset.cardId);if(c)ownedDetails[c.id]=c;}else{ownedCards.delete(cb.dataset.cardId);delete ownedDetails[cb.dataset.cardId];}await persistCollectionChanges();renderCollection();loadCards();}));
  updateOwnedCount();
  if(ownedOnly && !cardsToShow.length) $("status").textContent=t('noOwnedPage');
- }catch(e){if(my!==token)return;$("status").className="status error";$("status").textContent=e.message.startsWith('HTTP')?`The Pokémon TCG API is temporarily unavailable. Retrying automatically failed; please try again in a moment.`:`Could not load cards. ${e.message} Check your connection and try again.`;$("count").textContent=t('apiUnavailable')}
+ }catch(e){if(my!==token)return;$("status").className="status error";$("status").textContent=e.message.startsWith('HTTP')?t('apiTemporaryError'):`${t('apiLoadError')} ${e.message}`;$("count").textContent=t('apiUnavailable')}
 }
 async function loadMetadata(){
  try{let r=await fetchWithRetry("https://api.pokemontcg.io/v2/sets?pageSize=250&orderBy=-releaseDate",{retries:3,delayMs:600});let j=await r.json();sets=j.data||[];
@@ -533,11 +612,21 @@ $("prev").onclick=()=>{if(page>1){page--;loadCards();window.scrollTo({top:0,beha
 $("next").onclick=()=>{if(page*PAGE_SIZE<total){page++;loadCards();window.scrollTo({top:0,behavior:"smooth"})}};
 $("reset").onclick=()=>{$("search").value="";["generation","set","rarity","special","halloween"].forEach(id=>$(id).value="");$("sort").value="name";selected="All Pokémon";page=1;renderTypes();loadCards()};
 $("hideOwned").addEventListener("change",()=>{viewMode="browse";loadCards()});
-$("showOwned").addEventListener("click",()=>{ownedOnly=!ownedOnly;$("showOwned").textContent=ownedOnly?"Show all matching cards":"Show only cards I own";viewMode=ownedOnly?"collection":"browse";page=1;renderCollection();loadCards()});
+$("showOwned").addEventListener("click",()=>{ownedOnly=!ownedOnly;$("showOwned").textContent=ownedOnly?t('showAllMatching'):t('showOwned');viewMode=ownedOnly?"collection":"browse";page=1;renderCollection();loadCards()});
 $("browseView").addEventListener("click",()=>{viewMode="browse";ownedOnly=false;page=1;$("cards").style.display="grid";loadCards()});
 $("collectionView").addEventListener("click",()=>{viewMode="collection";ownedOnly=true;renderCollection();loadCards()});
 $("remainingView").addEventListener("click",()=>{viewMode="remaining";ownedOnly=false;$("hideOwned").checked=true;page=1;loadCards()});
-$("clearOwned").addEventListener("click",async()=>{if(confirm("Remove all saved owned-card checkmarks?")){ownedCards.clear();ownedDetails={};await persistCollectionChanges();renderCollection();loadCards()}});
+$("clearOwned").addEventListener("click",async()=>{
+  if(!confirm(t('confirmClearOwned'))){ return; }
+  const confirmSecond = confirm(t('confirmClearOwnedFinal'));
+  if(!confirmSecond){ return; }
+  ownedCards.clear();
+  ownedDetails={};
+  await persistCollectionChanges();
+  renderCollection();
+  loadCards();
+});
 renderTypes();updateOwnedCount();renderCollection();loadMetadata().then(async()=>{await hydrateOwnedDetails();loadCards();});
+loadEurToUsdRate();
 initAccountSupport();
 </script></body></html>
