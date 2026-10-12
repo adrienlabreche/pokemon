@@ -6,7 +6,7 @@
 <style>
 :root{color-scheme:dark;--bg:#10131b;--panel:#1a2030;--panel2:#242e43;--text:#f4f6fb;--muted:#aeb8cb;--accent:#ffd34e;--line:#344057}
 *{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at top,#202b43 0,#10131b 58%);color:var(--text);font:16px/1.5 system-ui,-apple-system,Segoe UI,sans-serif}
-header{position:relative;padding:30px 16px 24px;text-align:center;border-bottom:1px solid var(--line)}.header-shell{max-width:1450px;margin:0 auto;position:relative}.lang-wrap{position:absolute;top:0;right:0;display:flex;align-items:center;justify-content:flex-end}.lang-select{appearance:none;-webkit-appearance:none;-moz-appearance:none;border:1px solid var(--line);border-radius:999px;background:rgba(26,32,48,.9);color:var(--text);padding:9px 38px 9px 12px;font:inherit;cursor:pointer;box-shadow:0 8px 22px rgba(0,0,0,.15)}.lang-select:focus{outline:2px solid var(--accent);outline-offset:2px}.lang-wrap::after{content:"▾";position:absolute;right:14px;pointer-events:none;color:var(--muted);font-size:.8rem}h1{font-size:clamp(1.8rem,5vw,3rem);margin:0;font-weight:900;letter-spacing:-1px}h1 span{color:var(--accent)}header p{color:var(--muted);max-width:800px;margin:8px auto 0}
+header{position:relative;padding:30px 16px 24px;text-align:center;border-bottom:1px solid var(--line)}.header-shell{max-width:1450px;margin:0 auto;position:relative}.lang-wrap{position:absolute;top:0;right:0;display:flex;align-items:center;justify-content:flex-end}.lang-select{appearance:none;-webkit-appearance:none;-moz-appearance:none;border:1px solid var(--line);border-radius:999px;background:rgba(26,32,48,.9);color:var(--text);padding:9px 38px 9px 12px;font:inherit;cursor:pointer;box-shadow:0 8px 22px rgba(0,0,0,.15)}.lang-select:focus{outline:2px solid var(--accent);outline-offset:2px}.lang-wrap::after{content:"▾";position:absolute;right:14px;pointer-events:none;color:var(--muted);font-size:.8rem}.account-panel{position:absolute;top:0;left:0;display:flex;align-items:center;gap:8px;flex-wrap:wrap;max-width:min(430px,calc(100vw - 220px));z-index:2}.account-box{display:flex;align-items:center;gap:8px;padding:8px 10px;border:1px solid var(--line);border-radius:999px;background:rgba(26,32,48,.92);box-shadow:0 8px 22px rgba(0,0,0,.15)}.account-box input{background:rgba(16,19,27,.9);color:var(--text);border:1px solid var(--line);border-radius:999px;padding:8px 10px;min-width:130px}.account-box button,.plain-button{cursor:pointer;border:1px solid var(--line);border-radius:999px;background:var(--panel2);color:var(--text);padding:8px 12px}.account-box button.primary,.plain-button.primary{background:var(--accent);border-color:var(--accent);color:#171717;font-weight:800}.account-box .signed-user{display:flex;align-items:center;gap:8px;font-size:.86rem;color:var(--muted)}.auth-message{margin-top:8px;padding:8px 10px;border-radius:10px;background:rgba(255,211,78,.12);border:1px solid rgba(255,211,78,.25);color:var(--text);font-size:.8rem;display:none}.auth-message.visible{display:block}.auth-message.error{background:rgba(255,110,110,.12);border-color:rgba(255,110,110,.25);color:#ffc9c9}h1{font-size:clamp(1.8rem,5vw,3rem);margin:0;font-weight:900;letter-spacing:-1px}h1 span{color:var(--accent)}header p{color:var(--muted);max-width:800px;margin:8px auto 0}
 main{max-width:1450px;margin:auto;padding:20px 15px 44px}.filters{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}.filters input,.filters select{min-width:0;width:100%;font:inherit;border-radius:11px;border:1px solid var(--line);padding:11px 12px;background:var(--panel);color:var(--text)}.filters input:focus,.filters select:focus{outline:2px solid var(--accent)}
 h2{font-size:1.05rem;margin:22px 0 10px}.types{display:grid;grid-template-columns:repeat(auto-fit,minmax(115px,1fr));gap:8px}.type-btn{cursor:pointer;text-align:left;display:flex;align-items:center;gap:7px;background:var(--panel);color:var(--text);border:1px solid var(--line);border-radius:11px;padding:10px 9px}.type-btn.active{background:#3b3520;border-color:var(--accent)}.orb{width:12px;height:12px;border-radius:50%;flex-shrink:0;background:var(--c)}.type-btn small{margin-left:auto;color:var(--muted)}.summary{display:flex;justify-content:space-between;gap:12px;align-items:center;flex-wrap:wrap;margin:18px 0 12px;color:var(--muted)}.summary strong{color:var(--text)}button.action,.pagination button{cursor:pointer;border:1px solid var(--line);border-radius:10px;padding:10px 14px;background:var(--panel2);color:var(--text)}button.action.primary{background:var(--accent);color:#171717;border-color:var(--accent);font-weight:800}.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(155px,1fr));gap:14px}.card{min-width:0;background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:8px;overflow:hidden;transition:.15s}.card:hover{transform:translateY(-3px);border-color:#8291ad}.card img{display:block;width:100%;aspect-ratio:245/342;object-fit:contain;border-radius:9px;background:#0b0e14}.card h3{font-size:.9rem;line-height:1.25;margin:8px 1px 3px}.card p{font-size:.76rem;color:var(--muted);margin:3px 1px}.pill{display:inline-block;border:1px solid var(--line);border-radius:99px;padding:2px 7px;font-size:.68rem;color:var(--accent);margin:4px 3px 0 0}.status{text-align:center;padding:32px 10px;color:var(--muted)}.error{color:#ffb4b4}.pagination{display:flex;justify-content:center;align-items:center;gap:12px;margin:25px 0}.pagination button:disabled{opacity:.35;cursor:not-allowed}.owned-tools{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin:10px 0 16px}.owned-tools label{display:flex;align-items:center;gap:8px;background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:9px 12px;color:var(--text)}.owned-tools input{accent-color:var(--accent);width:17px;height:17px}.owned-tools .small{font-size:.82rem;color:var(--muted)}.owned-toggle{display:flex;align-items:center;gap:7px;margin-top:8px;font-size:.8rem;color:var(--muted);cursor:pointer}.owned-toggle input{accent-color:var(--accent);width:16px;height:16px}.card.is-owned{border-color:#72d6a0;box-shadow:inset 0 0 0 1px #72d6a0}.owned-tag{color:#8de5ae;font-size:.72rem;font-weight:800}.price{color:#ffe08a!important;font-weight:800;font-size:.82rem!important}.view-panel{margin:16px 0;padding:14px;border:1px solid var(--line);background:var(--panel);border-radius:13px}.view-panel h2{margin:0 0 8px}.view-panel p{margin:4px 0;color:var(--muted);font-size:.86rem}.view-buttons{display:flex;gap:8px;flex-wrap:wrap}.view-buttons button.active{border-color:var(--accent);color:var(--accent)}.foot{border-top:1px solid var(--line);margin-top:30px;padding-top:18px;color:var(--muted);font-size:.82rem}.foot a{color:var(--accent)}.note{background:#1b2637;border:1px solid var(--line);border-radius:12px;padding:12px 14px;color:var(--muted);font-size:.85rem;margin-top:14px}
 @media(max-width:850px){.filters{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:480px){.filters{grid-template-columns:1fr}.cards{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.types{grid-template-columns:repeat(2,minmax(0,1fr))}}
@@ -14,6 +14,15 @@ h2{font-size:1.05rem;margin:22px 0 10px}.types{display:grid;grid-template-column
 <body>
 <header>
   <div class="header-shell">
+    <div class="account-panel">
+      <div id="auth-panel" class="account-box">
+        <input id="auth-email" type="email" placeholder="Email" aria-label="Email" />
+        <input id="auth-password" type="password" placeholder="Password" aria-label="Password" />
+        <button id="sign-up-button" class="primary">Create account</button>
+        <button id="sign-in-button">Log in</button>
+        <button id="sign-out-button" class="plain-button" style="display:none;">Log out</button>
+      </div>
+    </div>
     <div class="lang-wrap">
       <label class="sr-only" for="language-select" style="position:absolute;left:-9999px;">Language</label>
       <select id="language-select" class="lang-select" aria-label="Choose language">
@@ -23,6 +32,7 @@ h2{font-size:1.05rem;margin:22px 0 10px}.types{display:grid;grid-template-column
     </div>
     <h1 id="mainTitle">Pokémon <span>Card Explorer</span></h1>
     <p id="pageSubtitle">Browse English Pokémon TCG cards by Energy type, generation, expansion, rarity, and special card category.</p>
+    <div id="auth-message" class="auth-message" aria-live="polite"></div>
   </div>
 </header>
 <main>
@@ -57,6 +67,196 @@ h2{font-size:1.05rem;margin:22px 0 10px}.types{display:grid;grid-template-column
 <div class="foot">Les données et images des cartes sont fournies par la <a href="https://pokemontcg.io/" target="_blank" rel="noreferrer">Pokémon TCG API</a>. Pokémon et Pokémon TCG sont des marques déposées de leurs propriétaires respectifs. Il s’agit d’un projet non officiel créé par des fans. Connexion Internet requise.</div>
 </main>
 <script>
+const SUPABASE_URL='https://lrqeaxntljuwhztpboas.supabase.co';
+const SUPABASE_ANON_KEY='sb_publishable_8c9YxtuPjUGKyJUPHd-mWw_I74GqwOJ';
+const ONLINE_ACCOUNTS_ENABLED = Boolean(SUPABASE_URL && SUPABASE_URL.includes('supabase.co') && SUPABASE_ANON_KEY && !SUPABASE_ANON_KEY.includes('YOUR_'));
+let supabaseClient=null;
+let currentUser=null;
+
+function setAuthMessage(text, isError=false){
+  const el=$('auth-message');
+  if(!el) return;
+  el.textContent=text || '';
+  el.classList.toggle('visible', Boolean(text));
+  el.classList.toggle('error', isError);
+}
+
+function renderAuthState(){
+  const emailInput=$('auth-email');
+  const passwordInput=$('auth-password');
+  const signUpBtn=$('sign-up-button');
+  const signInBtn=$('sign-in-button');
+  const signOutBtn=$('sign-out-button');
+  const authPanel=$('auth-panel');
+  if(!authPanel) return;
+  const isLoggedIn=Boolean(currentUser);
+  if(emailInput) emailInput.style.display=isLoggedIn ? 'none' : 'inline-block';
+  if(passwordInput) passwordInput.style.display=isLoggedIn ? 'none' : 'inline-block';
+  if(signUpBtn) signUpBtn.style.display=isLoggedIn ? 'none' : 'inline-block';
+  if(signInBtn) signInBtn.style.display=isLoggedIn ? 'none' : 'inline-block';
+  if(signOutBtn) signOutBtn.style.display=isLoggedIn ? 'inline-block' : 'none';
+  if(isLoggedIn){
+    const visibleUser=currentUser.email || 'User';
+    authPanel.innerHTML=`<div class="signed-user"><strong>${esc(visibleUser)}</strong></div><button id="sign-out-button" class="plain-button primary">${t('authLogout')}</button>`;
+    const btn=$('sign-out-button');
+    if(btn) btn.addEventListener('click', async()=>{ await signOut(); });
+    return;
+  }
+  authPanel.innerHTML=`<input id="auth-email" type="email" placeholder="${t('authEmail')}" aria-label="${t('authEmail')}" />
+    <input id="auth-password" type="password" placeholder="${t('authPassword')}" aria-label="${t('authPassword')}" />
+    <button id="sign-up-button" class="primary">${t('authCreateAccount')}</button>
+    <button id="sign-in-button">${t('authLogin')}</button>`;
+  const newSignUpBtn=$('sign-up-button');
+  const newSignInBtn=$('sign-in-button');
+  if(newSignUpBtn) newSignUpBtn.addEventListener('click', signUp);
+  if(newSignInBtn) newSignInBtn.addEventListener('click', signIn);
+}
+
+async function ensureSupabaseLoaded(){
+  if(!ONLINE_ACCOUNTS_ENABLED) return null;
+  if(window.supabase) return window.supabase;
+  await new Promise((resolve, reject)=>{
+    const existing=document.querySelector('script[data-supabase-sdk]');
+    if(existing){ existing.addEventListener('load', resolve, { once: true }); existing.addEventListener('error', reject, { once: true }); return; }
+    const script=document.createElement('script');
+    script.src='https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2';
+    script.async=true;
+    script.dataset.supabaseSdk='true';
+    script.onload=resolve;
+    script.onerror=reject;
+    document.head.appendChild(script);
+  });
+  return window.supabase;
+}
+
+async function initSupabaseClient(){
+  if(!ONLINE_ACCOUNTS_ENABLED) return null;
+  const supabaseModule=await ensureSupabaseLoaded();
+  if(!supabaseModule) return null;
+  if(!supabaseClient){
+    supabaseClient=supabaseModule.createClient(SUPABASE_URL, SUPABASE_ANON_KEY, {
+      auth: { persistSession: true, autoRefreshToken: true, detectSessionInUrl: true }
+    });
+  }
+  return supabaseClient;
+}
+
+async function signUp(){
+  const email=$('auth-email')?.value.trim();
+  const password=$('auth-password')?.value.trim();
+  if(!email || !password){ setAuthMessage('Please enter an email and password.', true); return; }
+  if(!ONLINE_ACCOUNTS_ENABLED){ setAuthMessage('Add the Supabase URL and anonymous key to enable online accounts.', true); return; }
+  try{
+    const client=await initSupabaseClient();
+    const { data, error } = await client.auth.signUp({ email, password });
+    if(error) throw error;
+    setAuthMessage('Account created successfully. Check your email if confirmation is required.', false);
+    if(data?.user){ currentUser=data.user; renderAuthState(); await loadRemoteCollection(); }
+  } catch(error){ setAuthMessage(error.message || 'Could not create the account.', true); }
+}
+
+async function signIn(){
+  const email=$('auth-email')?.value.trim();
+  const password=$('auth-password')?.value.trim();
+  if(!email || !password){ setAuthMessage('Please enter your email and password.', true); return; }
+  if(!ONLINE_ACCOUNTS_ENABLED){ setAuthMessage('Add the Supabase URL and anonymous key to enable online accounts.', true); return; }
+  try{
+    const client=await initSupabaseClient();
+    const { data, error } = await client.auth.signInWithPassword({ email, password });
+    if(error) throw error;
+    currentUser=data.user;
+    renderAuthState();
+    setAuthMessage('Connected successfully.', false);
+    await loadRemoteCollection();
+  } catch(error){ setAuthMessage(error.message || 'Login failed.', true); }
+}
+
+async function signOut(){
+  if(!ONLINE_ACCOUNTS_ENABLED || !supabaseClient){
+    currentUser=null; renderAuthState(); setAuthMessage('Offline mode active.', false); return;
+  }
+  try{
+    const { error } = await supabaseClient.auth.signOut();
+    if(error) throw error;
+    currentUser=null; renderAuthState(); setAuthMessage('Logged out.', false);
+    await syncLocalCollectionToRemote();
+  } catch(error){ setAuthMessage(error.message || 'Could not log out.', true); }
+}
+
+async function loadRemoteCollection(){
+  if(!ONLINE_ACCOUNTS_ENABLED || !supabaseClient || !currentUser){
+    saveOwned();
+    renderCollection();
+    return;
+  }
+  try{
+    const { data, error } = await supabaseClient.from('user_collections').select('card_id, card_data').eq('user_id', currentUser.id);
+    if(error) throw error;
+    const cardIds=new Set();
+    const cardMap={};
+    for(const row of data || []){
+      if(row.card_id){
+        cardIds.add(row.card_id);
+        if(row.card_data) cardMap[row.card_id]=row.card_data;
+      }
+    }
+    ownedCards=new Set(cardIds);
+    ownedDetails=cardMap;
+    saveOwned();
+    saveOwnedDetails();
+    renderCollection();
+    updateOwnedCount();
+  } catch(error){
+    setAuthMessage('Your online collection could not be loaded.', true);
+  }
+}
+
+async function syncLocalCollectionToRemote(){
+  if(!ONLINE_ACCOUNTS_ENABLED || !supabaseClient || !currentUser){
+    saveOwned();
+    return;
+  }
+  const rows=[...ownedCards].map(cardId => ({ user_id: currentUser.id, card_id: cardId, card_data: ownedDetails[cardId] || null }));
+  if(!rows.length){
+    const { error } = await supabaseClient.from('user_collections').delete().eq('user_id', currentUser.id);
+    if(error) throw error;
+    return;
+  }
+  const { error } = await supabaseClient.from('user_collections').upsert(rows, { onConflict: 'user_id, card_id' });
+  if(error) throw error;
+}
+
+async function persistCollectionChanges(){
+  saveOwned();
+  saveOwnedDetails();
+  if(ONLINE_ACCOUNTS_ENABLED && supabaseClient && currentUser){
+    try{ await syncLocalCollectionToRemote(); }
+    catch(error){ setAuthMessage('Your local collection was saved, but the online sync failed.', true); }
+  }
+}
+
+async function initAccountSupport(){
+  if(!ONLINE_ACCOUNTS_ENABLED){
+    renderAuthState();
+    return;
+  }
+  try{
+    await initSupabaseClient();
+    if(!supabaseClient) return;
+    const { data:{ session } } = await supabaseClient.auth.getSession();
+    currentUser=session?.user || null;
+    renderAuthState();
+    if(currentUser){ await loadRemoteCollection(); }
+    supabaseClient.auth.onAuthStateChange(async(_event, session) => {
+      currentUser = session?.user || null;
+      renderAuthState();
+      if(currentUser){ await loadRemoteCollection(); }
+    });
+  } catch(error){
+    setAuthMessage('Online account support is not configured yet.', true);
+  }
+}
+
 const TYPES=[
 {name:"All Pokémon",icon:"✦",color:"#e8eaf0",q:""},
 {name:"Grass",icon:"🌿",color:"#63c887",q:"Grass"},{name:"Fire",icon:"🔥",color:"#ff795d",q:"Fire"},
@@ -113,7 +313,7 @@ function renderCollection(){
  const totalCollectionValue=cards.reduce((sum,c)=>sum+cardPriceValue(c),0);
  $("collectionSummary").innerHTML=`<p><strong>${ownedCards.size}</strong> ${t('collectionSummary')}</p>`+
  (cards.length?`<div class="total-collection"><strong>${t('collectionTotal')}</strong> $${totalCollectionValue.toFixed(2)} USD</div><div class="cards" style="margin-top:12px">${cards.map(c=>{const img=c.images?.small||c.images?.large||"";return `<article class="card is-owned"><a href="${esc(c.images?.large||img||"https://pokemontcg.io/")}" target="_blank" rel="noreferrer"><img loading="lazy" src="${esc(img)}" alt="${esc(c.name)}"></a><h3>${esc(c.name)}</h3><p>${esc(c.set?.name||"")} ${c.number?"· #"+esc(c.number):""}</p><p class="price">${t('marketEstimate')} ${esc(cardPrice(c))}</p><button class="action" data-remove-owned="${esc(c.id)}">${t('removeFromCollection')}</button></article>`}).join("")}</div>`:`<p>${t('collectionEmpty')}</p>`);
- $("collectionSummary").querySelectorAll("[data-remove-owned]").forEach(b=>b.onclick=()=>{const id=b.dataset.removeOwned;ownedCards.delete(id);delete ownedDetails[id];saveOwned();saveOwnedDetails();updateOwnedCount();renderCollection();});
+ $("collectionSummary").querySelectorAll("[data-remove-owned]").forEach(b=>b.onclick=()=>{const id=b.dataset.removeOwned;ownedCards.delete(id);delete ownedDetails[id];persistCollectionChanges();updateOwnedCount();renderCollection();});
 }
 const OWNED_KEY="pokemonCardExplorerOwnedV1";
 let ownedCards=new Set();
@@ -133,6 +333,12 @@ const translations={
   en:{
     title:'Pokémon <span>Card Explorer</span>',
     subtitle:'Browse English Pokémon TCG cards by Energy type, generation, expansion, rarity, and special card category.',
+    authCreateAccount:'Create account',
+    authLogin:'Log in',
+    authLogout:'Log out',
+    authEmail:'Email',
+    authPassword:'Password',
+    authOffline:'Offline mode active.',
     searchPlaceholder:'Search Pokémon or card name…',
     allGenerations:'All generations / eras',
     allExpansions:'All expansions',
@@ -174,6 +380,12 @@ const translations={
   fr:{
     title:'Pokémon <span>Explorateur de cartes</span>',
     subtitle:'Parcourez les cartes Pokémon TCG en français selon le type d’énergie, la génération, l’extension, la rareté et la catégorie spéciale.',
+    authCreateAccount:'Créer un compte',
+    authLogin:'Se connecter',
+    authLogout:'Se déconnecter',
+    authEmail:'E-mail',
+    authPassword:'Mot de passe',
+    authOffline:'Mode hors ligne actif.',
     searchPlaceholder:'Rechercher un Pokémon ou une carte…',
     allGenerations:'Toutes générations / époques',
     allExpansions:'Toutes extensions',
@@ -241,6 +453,7 @@ function applyLanguage(lang){
   const note = document.querySelector('.note'); if (note) note.textContent = t('note');
   const foot = document.querySelector('.foot'); if (foot) foot.innerHTML = t('footer');
   const ownedCount = $('ownedCount'); if (ownedCount) ownedCount.textContent = `${ownedCards.size} ${t('cardsMarked')}`;
+  if (typeof renderAuthState === 'function') renderAuthState();
   if (typeof renderTypes === 'function') renderTypes();
   if (typeof loadMetadata === 'function') {
     const generation = $('generation'); if (generation && generation.value === '') generation.innerHTML = `<option value="">${t('allGenerations')}</option>` + (Array.from(new Set(sets.map(s => s.series).filter(Boolean))).map(g => `<option value="${esc(g)}">${esc(g)}</option>`).join(''));
@@ -297,7 +510,7 @@ async function loadCards(){
  $("cards").style.display=viewMode==="collection"?"none":"grid";
  $("collectionSummary").style.display=viewMode==="collection"?"block":"block";
  $("cards").innerHTML=cardsToShow.map(c=>{let img=c.images?.small||c.images?.large||"",types=(c.types||[]).map(t=>`<span class="pill">${esc(t)}</span>`).join(""),sub=(c.subtypes||[]).map(t=>`<span class="pill">${esc(t)}</span>`).join(""),isOwned=ownedCards.has(c.id);return `<article class="card ${isOwned?'is-owned':''}"><a href="${esc(c.images?.large||img||"https://pokemontcg.io/")}" target="_blank" rel="noreferrer"><img loading="lazy" src="${esc(img)}" alt="${esc(c.name)}" onerror="this.alt='Image unavailable';this.style.opacity='.25'"></a><h3>${esc(c.name)}</h3><p>${esc(c.set?.name||"")} ${c.number?"· #"+esc(c.number):""}</p><p>${esc(c.rarity||c.supertype||"Card")}</p><p class="price">${t('marketEstimate')} ${esc(cardPrice(c))}</p>${types}${sub}<label class="owned-toggle"><input type="checkbox" data-card-id="${esc(c.id)}" ${isOwned?'checked':''}> I own this card ${isOwned?'<span class="owned-tag">✓ OWNED</span>':''}</label></article>`}).join("");
- $("cards").querySelectorAll('input[data-card-id]').forEach(cb=>cb.addEventListener('change',()=>{const c=j.data.find(x=>x.id===cb.dataset.cardId);if(cb.checked){ownedCards.add(cb.dataset.cardId);if(c)ownedDetails[c.id]=c;}else{ownedCards.delete(cb.dataset.cardId);delete ownedDetails[cb.dataset.cardId];}saveOwned();saveOwnedDetails();renderCollection();loadCards();}));
+ $("cards").querySelectorAll('input[data-card-id]').forEach(cb=>cb.addEventListener('change',async()=>{const c=j.data.find(x=>x.id===cb.dataset.cardId);if(cb.checked){ownedCards.add(cb.dataset.cardId);if(c)ownedDetails[c.id]=c;}else{ownedCards.delete(cb.dataset.cardId);delete ownedDetails[cb.dataset.cardId];}await persistCollectionChanges();renderCollection();loadCards();}));
  updateOwnedCount();
  if(ownedOnly && !cardsToShow.length) $("status").textContent=t('noOwnedPage');
  }catch(e){if(my!==token)return;$("status").className="status error";$("status").textContent=e.message.startsWith('HTTP')?`The Pokémon TCG API is temporarily unavailable. Retrying automatically failed; please try again in a moment.`:`Could not load cards. ${e.message} Check your connection and try again.`;$("count").textContent=t('apiUnavailable')}
@@ -324,6 +537,7 @@ $("showOwned").addEventListener("click",()=>{ownedOnly=!ownedOnly;$("showOwned")
 $("browseView").addEventListener("click",()=>{viewMode="browse";ownedOnly=false;page=1;$("cards").style.display="grid";loadCards()});
 $("collectionView").addEventListener("click",()=>{viewMode="collection";ownedOnly=true;renderCollection();loadCards()});
 $("remainingView").addEventListener("click",()=>{viewMode="remaining";ownedOnly=false;$("hideOwned").checked=true;page=1;loadCards()});
-$("clearOwned").addEventListener("click",()=>{if(confirm("Remove all saved owned-card checkmarks?")){ownedCards.clear();ownedDetails={};saveOwned();saveOwnedDetails();renderCollection();loadCards()}});
+$("clearOwned").addEventListener("click",async()=>{if(confirm("Remove all saved owned-card checkmarks?")){ownedCards.clear();ownedDetails={};await persistCollectionChanges();renderCollection();loadCards()}});
 renderTypes();updateOwnedCount();renderCollection();loadMetadata().then(async()=>{await hydrateOwnedDetails();loadCards();});
+initAccountSupport();
 </script></body></html>
